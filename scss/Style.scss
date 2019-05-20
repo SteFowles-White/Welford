@@ -1,0 +1,517 @@
+// VARIABLES ------------------------------------ /
+
+$primary-color: #9AB4B3;
+$secondary-color: #A9A9A9;
+$color-white: white;
+$color-black: black;
+
+$font-stack-primary: "Gill Sans", sans-serif;
+
+// MIXIN ------------------------------------ /
+
+@mixin absolute {
+    z-index: 1;
+    position: absolute;
+}
+
+// BASE  ------------------------------------ /
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: $color-black;
+    line-height: 1.5;
+    letter-spacing: 0.2;
+    font-family: $font-stack-primary;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    }
+  h4 {
+        text-align: center;
+        font-size: 16px;
+        margin: 0px;
+    }
+ul {
+    list-style-type: none;
+    margin: 0px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: $color-black;
+    &:hover{color: $primary-color;}
+}
+
+
+// GRID  ------------------------------------ /
+
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.col-L {margin-left: 8.33%;}
+.col-R {margin-right: 8.33%;}
+
+.col-boarder {width: 100%;
+            border-bottom: solid 1px;
+            border-bottom-color: $primary-color;
+            margin-bottom: 2%;       
+        }
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+// Header  ------------------------------------ /
+
+#Header ul {
+    height: 30px;
+    li {
+        display:inline;
+        *display:inline; /*IE7*/
+        font-size: 14px;
+        padding-right: 4%;
+    }
+}
+
+#Header nav form input {
+    padding-bottom: 10px;
+    width: 80px;
+    height: 10px;
+    border: none;
+}
+
+#responsiveNav {
+    display: none;
+}
+
+.icon-r {
+    float: right !important;
+}
+
+ // BODY ------------------------------------ /
+
+#MainSection div {
+    height: auto;
+    img {
+        margin-right: 4%;
+    }
+    img, section {
+        width: 48%;
+        height: 700px;
+        float: left;
+    }
+    section {
+        background-color: $primary-color;
+    }
+    p {
+        text-align: center;
+        padding-top: 150px;
+        margin: 0px;
+        padding-bottom: 15px;
+        color: $color-white;
+        font-style: italic;
+    }
+    h2 {
+        text-align: center;
+        font-size: 60px;
+        letter-spacing: .3rem;
+        margin: 0px;
+        color: $color-white;
+    }
+    #line {
+        width: 40px;
+        border-bottom: 1px solid $color-white;
+        margin-left: 44%;
+        margin-top: 20px;
+    }
+}
+
+ // PANNEL ------------------------------------ /
+
+#pannel div section, 
+#Sale_block div {
+    margin-top: 2%;
+    width: 32%;
+    float: left;
+    padding: 0px;
+    img {
+        width: 100%;
+        height: 500px;
+    }
+}
+ .container {
+    position: relative;
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  .margin {
+    margin-right: 2% !important;
+}
+
+#pannel div section div div {
+    width: 80%;
+    height: 80px;
+    background-color: $color-white;
+    @include absolute;
+    bottom: 10%;
+    right: 10%;
+    outline: 1px solid $secondary-color;
+    outline-offset: -5px;
+    h3{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: $primary-color
+    }
+    p{
+        margin-top: 2px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        columns: $secondary-color;
+    }   
+} 
+ // SECTION BLOCK ------------------------------------ /
+
+#section_block {
+    height: 150px;
+    text-align: center;
+    h2 {
+        margin: 0px;
+        padding-top: 40px;
+        font-size: 20px;
+        }
+    p {
+        font-size: 16px;
+        font-style: italic;
+        color: $secondary-color;
+        }
+}
+ // SALE BLOCK ------------------------------------ /
+
+
+#Sale_block div {
+    width: 23.5% !important;
+    color: $color-black;
+    img {
+        width: 100%;
+        height: 400px;
+    }
+    p  {
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: $secondary-color;
+        span  {
+            padding-right: 10px;
+        }
+        span:first-child{
+            text-decoration: line-through;
+        }
+        span:last-child  {
+            color: #99BCDF;
+        }
+    }
+}
+
+.sale {
+    width: 40px;
+    height: 40px;
+    margin-top: 25px;
+    background-color: $color-black;
+    @include absolute;
+    Top: -45px;
+    right: 40%;
+    border-radius: 50%;
+    p {
+        color: $color-white !important;
+    }
+}
+
+
+ // FOOTER ------------------------------------ /
+
+#footer div {
+    border-top: solid 1px;
+    border-color: $secondary-color;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a {
+        font-size: 12px;
+        color: $secondary-color;
+        margin-right: 25px;
+        letter-spacing: 1px;
+    }
+    img {
+        width: 35px;
+        height: 35px;
+        margin-right: 40px;
+        margin-top: 10px;
+    }
+}
+
+#footer p {
+    text-align: center;
+    font-size: 12px;
+    color: $secondary-color;
+    span {
+        color: $color-black !important;
+        font-style: italic;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
+ 
+// SCREEN SIZE <1200 -------------------------- /
+
+@media screen and (max-width: 1300px) {
+#MainSection div img,
+#MainSection div section {
+    height: 550px;
+    p {
+        padding-top: 100px;
+      }
+  }
+}
+
+#pannel div section div img {
+    height: 400px;
+}
+
+#Sale_block div img {
+    height: 350px;
+}
+
+#line {
+    margin-left: 45%;
+}
+#Header ul {
+    li {font-size: 12px;}
+}
+// SCREEN SIZE <1024 -------------------------- /
+
+@media screen and (max-width: 1024px) {
+#MainSection div img,
+#MainSection div section {
+      height: 500px;
+      h2 {
+        font-size: 50px;
+    
+    }
+}
+
+#line {
+    margin-left: 44%;
+}
+#pannel div section div img {
+      height: 350px;
+  }
+  
+#Sale_block div img {
+      height: 300px;
+  }
+
+}
+
+// SCREEN SIZE <935-------------------------- /
+@media screen and (max-width: 935px) {
+#MainSection div img,
+#MainSection div section {
+          height: 450px;
+          h2 {
+            font-size: 45px; 
+            }
+        }
+#pannel div section div img { height: 310px;}
+#pannel div section div div p {font-size: 14px;}     
+#Sale_block div img {
+          height: 250px;
+      }
+#line {
+        margin-left: 44%;
+    }
+
+#responsiveNav {
+        display: inline-block;
+        padding: 0px;
+        font-size: 12px;
+    }
+#fullNav {
+        display: none;
+    }
+li.dropdown {
+        display: block;
+      }
+
+.dropdown-content {
+        display: none;
+        position: absolute;
+        right: 29%;
+        background-color: #f9f9f9;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        a {
+            color: $color-black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+          }
+        a:hover {background-color: #f1f1f1;}
+      }
+.dropdown:hover .dropdown-content {
+     display: block;
+    }
+.sale {
+        right: 37%;
+    }  
+}
+// SCREEN SIZE <768-------------------------- /
+@media screen and (max-width: 768px) {
+#MainSection div img,
+#MainSection div section {
+          height: 380px;
+          p {padding-top: 80px;}
+          h2 {font-size: 40px;}
+        }
+#Header nav form input {width: 60px;}
+#pannel div section div img { height: 290px;}
+#Sale_block div img {height: 200px;}
+#line {
+        margin-left: 44%;
+        width: 30px;
+     }
+#responsiveNav {
+        display: inline-block;
+        padding: 0px;
+        font-size: 12px;
+    }
+    .dropdown-content {
+        right: 25%
+    }
+#pannel div section div div {
+    h3{font-size: 16px;}
+     p{font-size: 12px;}
+}
+.sale {right: 35%;}
+}
+// SCREEN SIZE <600-------------------------- /
+@media screen and (max-width: 600px) {
+#MainSection div img,
+#MainSection div section { height: 300px;}
+#MainSection div section {
+            p {
+            padding-top: 40px;
+            font-size: 14px;
+            }
+            h2 {
+                font-size: 25px;
+                letter-spacing: .3rem
+            }
+          }
+#Header nav form input {width: 50px;}          
+#pannel div section div img {height: 220px;}
+#line {margin-left: 42%;}
+.dropdown-content {right: 18%}
+#pannel div section div div {
+    h3{font-size: 14px;}
+    p{font-size: 9px;}
+}
+#Sale_block div {
+    h4 {font-size: 14px;}
+    p  {font-size: 11px;}
+    img {height: 160px;}
+}
+.sale { right: 32%;}
+#footer div a { font-size: 10px;}
+}
+// SCREEN SIZE <480-------------------------- /
+@media screen and (max-width: 480px) {
+.col-2 {width: 30%;}
+.col-9 {width: 65%;}
+#MainSection div img,
+#MainSection div section {
+          height: 45vh;
+          width: 100%;
+          p {
+            padding-top: 40px;
+            font-size: 12px;
+          }
+          h1 {
+            font-size: 20px;
+            letter-spacing: .2rem
+            }
+        }
+#Header nav ul {text-align: left;}
+#pannel div section div img {height: 280px; }
+#pannel div section {
+        width: 70%;
+        margin-left: 15%;   
+        }
+#Sale_block div img { height: 120px;}
+ #line {
+        margin-left: 42%;
+        width: 30px;
+     }
+#pannel div section div div {
+        h3{font-size: 16px; }
+        p{font-size: 12px;}
+}
+#Sale_block div {
+    width: 70% !important;
+    margin-left: 15%;
+    }
+#Sale_block div {
+    img {
+    width: 100%;
+    height: 350px;
+    }
+    h4 {margin-top: 15px;}
+}
+.sale {right: 40%;}
+
+}
+// SCREEN SIZE <320-------------------------- /
+@media screen and (max-width: 320px) {
+#MainSection div img,
+#MainSection div section {height: 200px;}
+#Header nav form input {width: 60px;}
+#MainSection div section {
+        p {
+            padding-top: 30px;
+            font-size: 10px;
+          }
+        h1 {font-size: 16px; }
+}
+.col-9{width: 50%;}
+#line {
+            margin-left: 38%;
+            width: 20px;
+        }
+#pannel div section div img {height: 230px;}
+        #Sale_block div img {height: 250px;}
+    }
