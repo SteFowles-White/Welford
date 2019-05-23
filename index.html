@@ -5,19 +5,21 @@
     <title>WELFORD || Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-    <link rel='stylesheet' href="css/Style.css">
+    <link rel='stylesheet' href="./css/Style.1.css">
   </head>
   <body>
     <div id ="Header" class="row">
+
       <header class="col-12">
         <h1>WELFORD BOUQUET</h1>
       </header>
+  
+
       <nav class="col-10 col-L col-R">
-                <!-- This Nav will have a javascript onclick function in the future for the navigation to have full fuctionality -->
           <form action="#" class="col-2">
               <i class="fa fa-search"></i><input type="text" name="q">
             </form>
-          <ul id="fullNav" class="col-9">
+          <ul id="full-nav" class="col-9">
               <li><a href="#">HOME</a></li> 
               <li><a href="#">SHOP</a></li> 
               <li><a href="#">OUR STORY</a></li> 
@@ -26,7 +28,7 @@
               <li><a href="#">BLOG</a></li> 
               <li><a href="#">CONTACT</a></li>
           </ul>
-          <ul id="responsiveNav" class="col-9">
+          <ul id="responsive-nav" class="col-9">
               <li><a href="#">HOME</a></li>
               <li><a href="#">SHOP</a></li>
               <li class="dropdown">
@@ -43,96 +45,98 @@
           <i class="fa fa-shopping-bag icon-2 icon-r"></i>
       </nav>
     </div>
+
     <div class = "col-boarder"></div>
 
-    <div id="MainSection" class="row">
-      <div class="col-10 col-L col-R">
-        <img  src="./Images/amy-shamblen-662202-unsplash.jpg" alt="Main Imaage goes here">
-        <section class="container">
-          <p>Take a Look</p>
-          <h2>THE <br> WHITBY <br> RANGE</h2>
-          <!-- small line in centre of the div-->
-          <div id="line"></div>
-        </section>
-      </div>
-    </div>
-
-    <div id = "pannel" class="row">
-      <div class ="col-L col-R col-10">
-        <section class="margin">
-          <div class ="container">
-            <img src="./Images/thomas-ae-602202-unsplash.jpg" alt="Woman holding a red bouquet">
-            <div> 
-              <h3>THE MAKING</h3>
-              <p>Our yarn is 100% British.</p>
+    <div id="content-body">
+          <div id="main-section" class="row">
+            <div class="main-section1">
+              <img  class="margin"src="./Images/amy-shamblen.jpg" alt="Main Imaage goes here">
+              <section class="container">
+                <p>Take a Look</p>
+                <h2>THE <br> WHITBY <br> RANGE</h2>
+                <!-- small line in centre of the div-->
+                <div class="line"></div>
+              </section>
             </div>
           </div>
-        </section>
-        <section class="margin">
-            <div class ="container">
-              <img src="./Images/beatriz-perez-moya-191993-unsplash.jpg" alt="Woman holding a bouquet">
-              <div> 
-                <h3>OUR STORY</h3>
-                <p>A family run business.</p>
-              </div>
-            </div>
-          </section>
-          <section>
-              <div class ="container">
-                <img src="./Images/tom-the-photographer-651516-unsplash.jpg" alt="Woman holding a pink bouquet">
-                <div> 
-                  <h3>Commissions</h3>
-                  <p>Furnishin & upholstery.</p>
+
+          <div id = "pannel" class="row">
+            <div>
+              <section class=" pannel1 margin">
+                <div class ="container">
+                  <img src="./Images/thomas-ae.jpg" alt="Woman holding a red bouquet">
+                  <div class="pannel2"> 
+                    <h3>THE MAKING</h3>
+                    <p>Our yarn is 100% British.</p>
+                  </div>
                 </div>
-              </div>
-            </section>
-            
+              </section>
+              <section class=" pannel1 margin">
+                  <div class ="container">
+                    <img src="./Images/beatriz-perez-moya.jpg" alt="Woman holding a bouquet">
+                    <div class="pannel2"> 
+                      <h3>OUR STORY</h3>
+                      <p>A family run business.</p>
+                    </div>
+                  </div>
+                </section>
+                <section>
+                    <div class ="pannel1 container">
+                      <img src="./Images/tom-the-photographer.jpg" alt="Woman holding a pink bouquet">
+                      <div class="pannel2"> 
+                        <h3>Commissions</h3>
+                        <p>Furnishin & upholstery.</p>
+                      </div>
+                    </div>
+                  </section>
+                  
+                </div>
+
           </div>
 
-    </div>
+          <div id="section-block" class ="row">
+            <h2>OUR FAVORITES</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
 
-    <div id="section_block" class ="row">
-      <h2>OUR FAVORITES</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div>
+          <div id="sale-block">
+            <div class ="container margin sale-block-element1">
+              <div class = "sale">
+                <p>Sale</p>
+              </div>
+              <img src="./Images/monika-grabkowska.jpg" alt="Image of West Cliff">
+              <h4>WEST CLIFF</h4>
+              <p><span>£290.00  </span> <span>£250.00 </span></p>
+            </div>
+            <div class="margin sale-block-element1">
+                <img src="./Images/tanalee-youngblood.jpg" alt="Image of Esk">
+                <h4>ESK</h4>
+                <p>£100.00</p>
+            </div>
+            <div class="margin sale-block-element1">
+                <img src="./Images/alexandra-gorn.jpg" alt="Image of Sandsend">
+                <h4>SANDSEND</h4>
+                <p>£360.00</p>
+            </div>
+            <div class="sale-block-element1">
+                <img src="./Images/christie-kim.jpg" alt="Image of west cliff cushion">
+                <h4>WEST CLIFF CUSHION</h4>
+                <p>£250.00</p>
+            </div>
 
-    <div id="Sale_block" class ="row col-L col-R col-10">
-      <div class ="container margin">
-        <div class = "sale">
-          <p>Sale</p>
-        </div>
-        <img src="./Images/monika-grabkowska-664428-unsplash.jpg" alt="Image of West Cliff">
-        <h4>WEST CLIFF</h4>
-        <p><span>£290.00  </span> <span>£250.00 </span></p>
+          </div>
       </div>
-      <div class="margin">
-          <img src="./Images/tanalee-youngblood-344759-unsplash.jpg" alt="Image of Esk">
-          <h4>ESK</h4>
-          <p>£100.00</p>
-      </div>
-      <div class="margin">
-          <img src="./Images/alexandra-gorn-328026-unsplash.jpg" alt="Image of Sandsend">
-          <h4>SANDSEND</h4>
-          <p>£360.00</p>
-      </div>
-      <div>
-          <img src="./Images/christie-kim-769380-unsplash.jpg" alt="Image of west cliff cushion">
-          <h4>WEST CLIFF CUSHION</h4>
-          <p>£250.00</p>
-      </div>
-
-    </div>
-
     <footer id="footer" class ="row col-12">
       <div>
-        <a href="">FAQ</a>
-        <a href="">DELIVERY & RETURNS</a>
-        <a href="">TERMS & CONDITIONS</a>
-        <a href="">CONTACT US</a>
+        <a href="#">FAQ</a>
+        <a href="#">DELIVERY & RETURNS</a>
+        <a href="#">TERMS & CONDITIONS</a>
+        <a href="#">CONTACT US</a>
       </div>
       <div>
-        <a href="#"><img src="./Images/TwitterIcon.png" alt="Twitter"></a>
-        <a href="#"><img src="./Images//FacebookIcon.png" alt="Facebook"></a>
+        <a href="#"><img src="./Images/twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="./Images/facebook-icon.png" alt="Facebook"></a>
         <a href="#"><img src="./Images/instagram.png" alt="instagram"></a>
       </div>
       <p>COPYRIGHT 2017</p>
@@ -141,4 +145,3 @@
   <script src="./JavaScript/index.js"></script>
   </body>
 </html>
-
