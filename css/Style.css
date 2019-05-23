@@ -128,7 +128,7 @@ a:hover {
   border: none;
 }
 
-#responsiveNav {
+#responsive-nav {
   display: none;
 }
 
@@ -136,53 +136,115 @@ a:hover {
   float: right !important;
 }
 
-#MainSection div {
-  height: auto;
+li.dropdown {
+  display: block;
 }
-#MainSection div img {
-  margin-right: 4%;
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 60%;
 }
-#MainSection div img, #MainSection div section {
-  width: 48%;
-  height: 700px;
-  float: left;
+#dropdown-content a {
+  color: black;
+  text-align: center;
+  width: 100%;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
-#MainSection div section {
+#dropdown-content a:hover {
   background-color: #9AB4B3;
 }
-#MainSection div p {
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#content-body {
+  width: 1200px;
+  height: auto;
+  margin: auto;
+  -webkit-transition: width 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 1s;
+}
+
+.main-section1 {
+  height: auto;
+}
+.main-section1 img {
+  margin-right: 30px;
+}
+.main-section1 img, .main-section1 section {
+  width: 585px;
+  height: 600px;
+  float: left;
+  -webkit-transition: width 1s, height 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 1s, height 1s;
+}
+.main-section1 section {
+  background-color: #9AB4B3;
+}
+.main-section1 p {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 120px;
   margin: 0px;
   padding-bottom: 15px;
   color: white;
   font-style: italic;
+  -webkit-transition: padding-top 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: padding-top 1s;
 }
-#MainSection div h2 {
+.main-section1 h2 {
   text-align: center;
   font-size: 60px;
   letter-spacing: 0.3rem;
   margin: 0px;
   color: white;
+  -webkit-transition: font-size 1s, letter-spacing 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: font-size 1s, letter-spacing 1s;
 }
-#MainSection div #line {
+.main-section1 .line {
   width: 40px;
+  margin-left: 272.5px;
   border-bottom: 1px solid white;
-  margin-left: 44%;
   margin-top: 20px;
+  -webkit-transition: margin-left 1s, width 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: margin-left 1s, width 1s;
 }
 
-#pannel div section,
-#Sale_block div {
-  margin-top: 2%;
-  width: 32%;
+.pannel1,
+.sale-block-element1 {
+  margin-top: 30px;
+  width: 380px;
   float: left;
   padding: 0px;
+  -webkit-transition: width 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 1s;
 }
-#pannel div section img,
-#Sale_block div img {
+.pannel1 img,
+.sale-block-element1 img {
   width: 100%;
   height: 500px;
+  -webkit-transition: height 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: height 1s;
+}
+
+.margin {
+  margin-right: 30px !important;
+  -webkit-transition: margin-right 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: margin-right 1s;
 }
 
 .container {
@@ -191,11 +253,7 @@ a:hover {
   color: #A9A9A9;
 }
 
-.margin {
-  margin-right: 2% !important;
-}
-
-#pannel div section div div {
+.pannel2 {
   width: 80%;
   height: 80px;
   background-color: white;
@@ -206,70 +264,82 @@ a:hover {
   outline: 1px solid #A9A9A9;
   outline-offset: -5px;
 }
-#pannel div section div div h3 {
+.pannel2 h3 {
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 20px;
   color: #9AB4B3;
 }
-#pannel div section div div p {
+.pannel2 p {
   margin-top: 2px;
   margin-bottom: 10px;
   font-size: 16px;
   columns: #A9A9A9;
 }
 
-#section_block {
+#section-block {
   height: 150px;
   text-align: center;
 }
-#section_block h2 {
+#section-block h2 {
   margin: 0px;
   padding-top: 40px;
   font-size: 20px;
 }
-#section_block p {
+#section-block p {
   font-size: 16px;
   font-style: italic;
   color: #A9A9A9;
 }
 
-#Sale_block div {
-  width: 23.5% !important;
+.sale-block-element1 {
+  width: 277px !important;
   color: black;
+  float: left;
+  -webkit-transition: width 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 1s;
 }
-#Sale_block div img {
+.sale-block-element1 img {
   width: 100%;
   height: 400px;
+  -webkit-transition: height 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: height 1s;
 }
-#Sale_block div p {
+.sale-block-element1 p {
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
   color: #A9A9A9;
 }
-#Sale_block div p span {
+.sale-block-element1 p span {
   padding-right: 10px;
 }
-#Sale_block div p span:first-child {
+.sale-block-element1 p span:first-child {
   text-decoration: line-through;
 }
-#Sale_block div p span:last-child {
+.sale-block-element1 p span:last-child {
   color: #99BCDF;
 }
 
 .sale {
-  width: 40px;
-  height: 40px;
-  margin-top: 25px;
+  width: 60px !important;
+  height: 60px;
   background-color: black;
   z-index: 1;
   position: absolute;
-  Top: -45px;
-  right: 40%;
-  border-radius: 50%;
+  Top: -30px;
+  right: 101px;
+  border-radius: 100%;
+  -webkit-transition: right 1s;
+  /* For Safari 3.1 to 6.0 */
+  transition: right 1s;
 }
 .sale p {
+  margin-top: 20px;
+  font-size: 80%;
+  margin-bottom: 14px;
   color: white !important;
 }
 
@@ -306,224 +376,100 @@ a:hover {
 }
 
 @media screen and (max-width: 1300px) {
-  #MainSection div img,
-#MainSection div section {
-    height: 550px;
+  #content-body {
+    width: 1024px;
   }
-  #MainSection div img p,
-#MainSection div section p {
-    padding-top: 100px;
+
+  .main-section1 img, .main-section1 section {
+    width: 497px;
+    height: 510px;
+    float: left;
   }
-}
-#pannel div section div img {
-  height: 400px;
-}
-
-#Sale_block div img {
-  height: 350px;
-}
-
-#line {
-  margin-left: 45%;
-}
-
-#Header ul li {
-  font-size: 12px;
-}
-
-@media screen and (max-width: 1024px) {
-  #MainSection div img,
-#MainSection div section {
-    height: 500px;
+  .main-section1 p {
+    padding-top: 80px;
   }
-  #MainSection div img h2,
-#MainSection div section h2 {
+  .main-section1 h2 {
     font-size: 50px;
   }
-
-  #line {
-    margin-left: 44%;
+  .main-section1 .line {
+    width: 40px;
+    margin-left: 228.5px;
   }
 
-  #pannel div section div img {
-    height: 350px;
+  .pannel1 {
+    width: 321.3px;
   }
-
-  #Sale_block div img {
-    height: 300px;
-  }
-}
-@media screen and (max-width: 935px) {
-  #MainSection div img,
-#MainSection div section {
-    height: 450px;
-  }
-  #MainSection div img h2,
-#MainSection div section h2 {
-    font-size: 45px;
-  }
-
-  #pannel div section div img {
-    height: 310px;
-  }
-
-  #pannel div section div div p {
-    font-size: 14px;
-  }
-
-  #Sale_block div img {
-    height: 250px;
-  }
-
-  #line {
-    margin-left: 44%;
-  }
-
-  #responsiveNav {
-    display: inline-block;
-    padding: 0px;
-    font-size: 12px;
-  }
-
-  #fullNav {
-    display: none;
-  }
-
-  li.dropdown {
-    display: block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 29%;
-    background-color: #f9f9f9;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
+  .pannel1 img {
+    height: 420px;
   }
 
   .sale {
-    right: 37%;
+    right: 80px;
+  }
+
+  .sale-block-element1 {
+    width: 233.5px !important;
+  }
+  .sale-block-element1 img {
+    height: 336px;
+  }
+
+  #Header ul li {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #content-body {
+    width: 768px;
+  }
+
+  .margin {
+    margin-right: 25px !important;
+  }
+
+  .main-section1 img, .main-section1 section {
+    width: 371.5px;
+    height: 379px;
+    float: left;
+  }
+  .main-section1 p {
+    padding-top: 60px;
+  }
+  .main-section1 h2 {
+    font-size: 40px;
+    letter-spacing: 0.1rem;
+  }
+  .main-section1 .line {
+    width: 40px;
+    margin-left: 164.5px;
+  }
+
+  .pannel1 {
+    width: 239.3px;
+  }
+  .pannel1 img {
+    height: 289.5px;
+  }
+
+  .sale {
+    right: 55px;
+  }
+
+  .sale-block-element1 {
+    width: 173.25px !important;
+  }
+  .sale-block-element1 img {
+    height: 235px;
   }
 }
 @media screen and (max-width: 768px) {
-  #MainSection div img,
-#MainSection div section {
-    height: 380px;
-  }
-  #MainSection div img p,
-#MainSection div section p {
-    padding-top: 80px;
-  }
-  #MainSection div img h2,
-#MainSection div section h2 {
-    font-size: 40px;
-  }
-
   #Header nav form input {
     width: 60px;
   }
-
-  #pannel div section div img {
-    height: 290px;
-  }
-
-  #Sale_block div img {
-    height: 200px;
-  }
-
-  #line {
-    margin-left: 44%;
-    width: 30px;
-  }
-
-  #responsiveNav {
-    display: inline-block;
-    padding: 0px;
-    font-size: 12px;
-  }
-
-  .dropdown-content {
-    right: 25%;
-  }
-
-  #pannel div section div div h3 {
-    font-size: 16px;
-  }
-  #pannel div section div div p {
-    font-size: 12px;
-  }
-
-  .sale {
-    right: 35%;
-  }
 }
 @media screen and (max-width: 600px) {
-  #MainSection div img,
-#MainSection div section {
-    height: 300px;
-  }
-
-  #MainSection div section p {
-    padding-top: 40px;
-    font-size: 14px;
-  }
-  #MainSection div section h2 {
-    font-size: 25px;
-    letter-spacing: 0.3rem;
-  }
-
   #Header nav form input {
     width: 50px;
-  }
-
-  #pannel div section div img {
-    height: 220px;
-  }
-
-  #line {
-    margin-left: 42%;
-  }
-
-  .dropdown-content {
-    right: 18%;
-  }
-
-  #pannel div section div div h3 {
-    font-size: 14px;
-  }
-  #pannel div section div div p {
-    font-size: 9px;
-  }
-
-  #Sale_block div h4 {
-    font-size: 14px;
-  }
-  #Sale_block div p {
-    font-size: 11px;
-  }
-  #Sale_block div img {
-    height: 160px;
-  }
-
-  .sale {
-    right: 32%;
   }
 
   #footer div a {
@@ -531,110 +477,28 @@ a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  .col-2 {
-    width: 30%;
-  }
-
-  .col-9 {
-    width: 65%;
-  }
-
-  #MainSection div img,
-#MainSection div section {
-    height: 45vh;
-    width: 100%;
-  }
-  #MainSection div img p,
-#MainSection div section p {
-    padding-top: 40px;
-    font-size: 12px;
-  }
-  #MainSection div img h1,
-#MainSection div section h1 {
-    font-size: 20px;
-    letter-spacing: 0.2rem;
-  }
-
   #Header nav ul {
     text-align: left;
   }
-
-  #pannel div section div img {
-    height: 280px;
-  }
-
-  #pannel div section {
-    width: 70%;
-    margin-left: 15%;
-  }
-
-  #Sale_block div img {
-    height: 120px;
-  }
-
-  #line {
-    margin-left: 42%;
-    width: 30px;
-  }
-
-  #pannel div section div div h3 {
-    font-size: 16px;
-  }
-  #pannel div section div div p {
-    font-size: 12px;
-  }
-
-  #Sale_block div {
-    width: 70% !important;
-    margin-left: 15%;
-  }
-
-  #Sale_block div img {
-    width: 100%;
-    height: 350px;
-  }
-  #Sale_block div h4 {
-    margin-top: 15px;
-  }
-
-  .sale {
-    right: 40%;
-  }
 }
-@media screen and (max-width: 320px) {
-  #MainSection div img,
-#MainSection div section {
-    height: 200px;
-  }
-
-  #Header nav form input {
-    width: 60px;
-  }
-
-  #MainSection div section p {
-    padding-top: 30px;
-    font-size: 10px;
-  }
-  #MainSection div section h1 {
-    font-size: 16px;
-  }
-
-  .col-9 {
-    width: 50%;
-  }
-
-  #line {
-    margin-left: 38%;
-    width: 20px;
-  }
-
-  #pannel div section div img {
-    height: 230px;
-  }
-
-  #Sale_block div img {
-    height: 250px;
-  }
+#responsive-nav {
+  display: inline-block;
+  padding: 0px;
+  font-size: 12px;
 }
 
-/*# sourceMappingURL=Style.css.map */
+#full-nav {
+  display: none;
+}
+
+#responsive-nav {
+  display: inline-block;
+  padding: 0px;
+  font-size: 12px;
+}
+
+.dropdown-content {
+  right: 25%;
+}
+
+/*# sourceMappingURL=style.1.css.map */
