@@ -1,9 +1,14 @@
+// VARIABLES ------------------------------------ /
+
 $primary-color: #9AB4B3;
 $secondary-color: #A9A9A9;
 $color-white: white;
 $color-black: black;
 
 $font-stack-primary: "Gill Sans", sans-serif;
+
+$body-transcation: .2s;
+$div-transcation: .2s;
 
 // MIXIN ------------------------------------ /
 
@@ -44,62 +49,60 @@ a {
     color: $color-black;
     &:hover{color: $primary-color;}
 }
-
-
-// GRID  ------------------------------------ /
-
-[class*="col-"] {
-    float: left;
-    padding: 0px;
-  }
-
-  .row::after {
+.border{
+    width: 100%;
+    border-bottom: 2px solid #A9A9A9
+}
+.row::after {
     content: "";
     clear: both;
     display: table;
   }
-.col-L {margin-left: 8.33%;}
-.col-R {margin-right: 8.33%;}
 
-.col-boarder {width: 100%;
-            border-bottom: solid 1px;
-            border-bottom-color: $primary-color;
-            margin-bottom: 2%;       
-        }
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
 // Header  ------------------------------------ /
 
-#Header ul {
-    height: 30px;
-    li {
-        display:inline;
-        *display:inline; /*IE7*/
-        font-size: 14px;
-        padding-right: 4%;
+#header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid $primary-color;
+}
+
+.nav_block {
+    width: 1200px;
+    margin: auto;
+    -webkit-transition: width $div-transcation; /* For Safari 3.1 to 6.0 */
+    transition: width $div-transcation;
+    form {
+        float: left;
+        margin-right: 0px;
+        width: 250px;
+        -webkit-transition: width $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: width $div-transcation;
+    }
+    input{
+        margin-left: 5px;
+        border: none;
+        height: 25px;
+        -webkit-transition: width $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: width $div-transcation;
     }
 }
 
-#Header nav form input {
-    padding-bottom: 10px;
-    width: 80px;
-    height: 10px;
-    border: none;
+.full-nav {
+        height: 40px;
+        width: 900px;
+        float: left;
+        padding-left: 0px;
+        li {
+            float: left;
+            font-size: 16px;
+            padding-right: 30px;
+            height: 40px;
+        }
 }
 
-#responsive-nav {
+.responsive-nav {
     display: none;
 }
 
@@ -136,8 +139,9 @@ li.dropdown {
     width: 1200px;
     height: auto;
     margin: auto;
-    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
-    transition: width 1s;
+    margin-top: 30px; 
+    -webkit-transition: width $body-transcation; /* For Safari 3.1 to 6.0 */
+    transition: width $body-transcation;
 }
 
 
@@ -150,8 +154,8 @@ li.dropdown {
         width: 585px;
         height: 600px;
         float: left;
-        -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
-        transition: width 1s, height 1s;
+        -webkit-transition: width $div-transcation, height $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: width $div-transcation, height $div-transcation;
     }
     section {
         background-color: $primary-color;
@@ -163,8 +167,8 @@ li.dropdown {
         padding-bottom: 15px;
         color: $color-white;
         font-style: italic;
-        -webkit-transition: padding-top 1s; /* For Safari 3.1 to 6.0 */
-        transition: padding-top 1s;
+        -webkit-transition: padding-top $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: padding-top $div-transcation;
     }
     h2 {
         text-align: center;
@@ -172,16 +176,16 @@ li.dropdown {
         letter-spacing: .3rem;
         margin: 0px;
         color: $color-white;
-        -webkit-transition: font-size 1s, letter-spacing 1s; /* For Safari 3.1 to 6.0 */
-        transition: font-size 1s, letter-spacing 1s;
+        -webkit-transition: font-size $div-transcation, letter-spacing $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: font-size $div-transcation, letter-spacing $div-transcation;
     }
     .line {
         width: 40px;
         margin-left: 272.5px;
         border-bottom: 1px solid $color-white;
         margin-top: 20px;
-        -webkit-transition: margin-left 1s, width 1s; /* For Safari 3.1 to 6.0 */
-        transition: margin-left 1s, width 1s;
+        -webkit-transition: margin-left $div-transcation, width $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: margin-left $div-transcation, width $div-transcation;
     }
 }
 
@@ -193,19 +197,19 @@ li.dropdown {
      width: 380px;
      float: left;
      padding: 0px;
-     -webkit-transition: width 1s,; /* For Safari 3.1 to 6.0 */
-     transition: width 1s;
+     -webkit-transition: width $div-transcation; /* For Safari 3.1 to 6.0 */
+     transition: width $div-transcation;
      img {
          width: 100%;
          height: 500px;
-         -webkit-transition: height 1s,; /* For Safari 3.1 to 6.0 */
-         transition: height 1s;
+         -webkit-transition: height $div-transcation; /* For Safari 3.1 to 6.0 */
+         transition: height $div-transcation;
      }
  }
  .margin {
     margin-right: 30px !important;
-    -webkit-transition: margin-right 1s,; /* For Safari 3.1 to 6.0 */
-    transition: margin-right 1s;
+    -webkit-transition: margin-right $div-transcation; /* For Safari 3.1 to 6.0 */
+    transition: margin-right $div-transcation;
 }
 
 .container {
@@ -263,13 +267,13 @@ li.dropdown {
     width: 277px !important;
     color: $color-black;
     float: left;
-    -webkit-transition: width 1s,; /* For Safari 3.1 to 6.0 */
-    transition: width 1s;
+    -webkit-transition: width $div-transcation; /* For Safari 3.1 to 6.0 */
+    transition: width $div-transcation;
     img {
         width: 100%;
         height: 400px;
-        -webkit-transition: height 1s,; /* For Safari 3.1 to 6.0 */
-        transition: height 1s;
+        -webkit-transition: height $div-transcation; /* For Safari 3.1 to 6.0 */
+        transition: height $div-transcation;
     }
     p  {
         margin-top: 10px;
@@ -293,10 +297,10 @@ li.dropdown {
     background-color: $color-black;
     @include absolute;
     Top: -30px;
-    right: 101px;;
+    right: 101px;
     border-radius: 100%;
-    -webkit-transition: right 1s,; /* For Safari 3.1 to 6.0 */
-    transition: right 1s;
+    -webkit-transition: right $div-transcation; /* For Safari 3.1 to 6.0 */
+    transition: right $div-transcation;
     p {
         
         margin-top: 20px;
@@ -306,6 +310,11 @@ li.dropdown {
     }
 }
  // FOOTER ------------------------------------ /
+ #footer{
+     width: 100%;
+     float: left;
+     margin: auto;
+ }
 
 #footer div {
     border-top: solid 1px;
@@ -339,12 +348,20 @@ li.dropdown {
     }
 }
  
-// SCREEN SIZE <1200 -------------------------- /
+// SCREEN SIZE <1300 -------------------------- /
 
 @media screen and (max-width: 1300px) {
 
 #content-body {width: 1024px;}
-
+.nav_block {
+    width: 1024px;
+    form {
+        width: 200px;
+}
+}
+.full-nav {
+width: 800px;
+}
 .main-section1 {
     img, section {
         width: 497px;
@@ -361,66 +378,92 @@ li.dropdown {
         width: 40px;
         margin-left: 228.5px;
     }
-    }   
-
-    .pannel1 {
+} 
+.pannel1 {
         width: 321.3px;
         img {
             height: 420px;
         }
     }
-    
-    .sale {
+.sale {
         right: 80px;
-    }
-    
- .sale-block-element1 {
+    }  
+.sale-block-element1 {
     width: 233.5px !important;
     img {
         height: 336px;
     }
 }
-#Header ul li {font-size: 12px;}
 }
 // SCREEN SIZE <1024 -------------------------- /
 @media screen and (max-width: 1024px) {
 
-    #content-body {width: 768px;}
-    .margin {margin-right: 25px !important;}
-    .main-section1 {
-        img, section {
-            width: 371.5px;
-            height: 379px;
-            float: left;
-         }
-         p {
-            padding-top: 60px;
-        }
-        h2 {
-            font-size: 40px;
-            letter-spacing: .1rem; 
-        }
-        .line {
-            width: 40px;
-            margin-left: 164.5px;
-        }  
-        } 
- 
-        .pannel1{
-            width: 239.3px;
-            img {
-                height: 289.5px;
-            }
-        }
+#content-body {width: 768px;}
+.nav_block {
+    width: 768px;
+    form {
+        width: 150px;
+    }
+    input{
+        width: 100px;
+}
+}
 
-        .sale {
-            right: 55px;
+.full-nav {
+    display: none;
+}
+
+.responsive-nav{
+display: inline-block;
+padding: 0px;
+width: 450px;
+li{
+    float: left;
+    width: 100px;
+    margin: auto;
+}
+li:first-child{
+    margin-left: 75px;
+}
+}
+.dropdown-content {
+    a{
+        width: 100%;
+    }
+}
+.main-section1 {
+    img, section {
+        width: 368.5px;
+        height: 379px;
+        float: left;
+    }
+    p {
+        padding-top: 60px;
+    }
+    h2 {
+        font-size: 40px;
+        letter-spacing: .1rem; 
+    }
+.line {
+        width: 40px;
+        margin-left: 164.5px;
+    }  
+        } 
+.pannel1{
+          width: 236px;
+          img {
+                height: 289.5px;
+         }
+}
+
+.sale {
+         right: 55px;
         }
         
-     .sale-block-element1 {
-        width: 173.25px !important;
+.sale-block-element1 {
+        width: 169.5px !important;
         img {
-            height: 235px;
+            height: 200px;
         }
     }
 
@@ -429,51 +472,142 @@ li.dropdown {
 
 // SCREEN SIZE <768-------------------------- /
 @media screen and (max-width: 768px) {
+#content-body {width: 480px;}
 
-#Header nav form input {width: 60px;}
+.nav_block {
+    width: 480px;
+    form {
+        width: 100px;
+   }
+ input{
+    width: 50px;
+    }
+}
+
+.full-nav {
+display: none;
+}
+
+.responsive-nav{
+width: 350px;
+    li{
+    width: 90px;
+    }
+    li:first-child{
+    margin-left: 15px;
+    }
+}
+
+.main-section1 {
+    img, section {
+        width: 480px;
+        height: 450px;
+        margin-bottom: 20px;
+        float: left;
+     }
+    .line {
+        width: 40px;
+        margin-left: 220px;
+    }  
+    } 
+
+    .pannel1{
+        width: 480px;
+        img {
+            height: 500px;
+        }
+    }
+
+    .sale {
+        right: 55px;
+    }
+    
+ .sale-block-element1 {
+    width: 210px !important;
+    img {
+        height: 210px;
+    }
+    
+}
+
+.sale {
+    right: 70px;
+}
+
+#header nav form input {width: 60px;}
+
 }
 
 // SCREEN SIZE <600-------------------------- /
 @media screen and (max-width: 600px) {
 
-#Header nav form input {width: 50px;}          
+#header nav form input {width: 50px;}          
 #footer div a { font-size: 10px;}
 }
-// SCREEN SIZE <480-------------------------- /
-@media screen and (max-width: 480px) {
 
-#Header nav ul {text-align: left;}
-
-}
 // SCREEN SIZE <320-------------------------- /
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#responsive-nav {
-        display: inline-block;
-        padding: 0px;
-        font-size: 12px;
+@media screen and (max-width: 480px){
+#content-body {width: 320px;}
+#header {height: 100px;}
+.nav_block {
+    width: 320px;
+    form {
+        width: 305px;
+        margin-left: 25px;
+   }
+ input{
+    width: 300px;
     }
-#full-nav {
-        display: none;
+}
+.responsive-nav{
+    width: 280px;
+        li{
+        width: 80px;
+
+        }
     }
 
-#responsive-nav {
-        display: inline-block;
-        padding: 0px;
-        font-size: 12px;
+.main-section1 {
+    img, section {
+        width: 320px;
+        height: 266px;
+        margin-bottom: 20px;
+        float: left;
+     }
+     p {
+        padding-top: 30px;
     }
-.dropdown-content {
-        right: 25%;
+    h2 {
+        font-size: 30px;
+        letter-spacing: .1rem; 
     }
+    .line {
+        width: 40px;
+        margin-left: 140px;
+    }  
+    } 
+
+    .pannel1{
+        width: 320px;
+        img {
+            height: 400px;
+        }
+    }
+
+    .sale {
+        right: 55px;
+    }
+    
+ .sale-block-element1 {
+    width: 320px !important;
+    img {
+        height: 350px;
+    }
+    
+}
+
+.sale {
+    right: 120px;
+}
+}
